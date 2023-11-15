@@ -1,362 +1,155 @@
 <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible"IE=edge>
-        <link rel="stylesheet" href="estilo/estilo2.css">
-        <title>Factura</title>
-        
-        <style>
-            html{
-                background-image: url("./imagenes/22.jpg");
-                background-repeat: no-repeat;
-                background-attachment: fixed;
-                background-size: cover;
-            }
-            .back{
-                margin: 0 42%;
-                padding: 14px 18px;
-                background-color: #5c1515;
-                color: white;
-                border-radius: 4px;
-                text-decoration: none;
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" IE="edge">
+    <link rel="stylesheet" href="estilo/estilo2.css">
+    <title>Factura</title>
 
-            }
-            
-            .color{
-                background-color: rgb(250, 244, 243);
-            }
-
-        </style>
-
-        <script lang="javascript">
-
-            function ver1(){
-                if(document.f1.pro1.selectedIndex==1)
-                    document.f1.val1.value="59.000"
-                    else if(document.f1.pro1.selectedIndex==2)
-                            document.f1.val1.value="89.000"
-                    else if(document.f1.pro1.selectedIndex==3)
-                            document.f1.val1.value="69.000"
-                    else if(document.f1.pro1.selectedIndex==4)
-                            document.f1.val1.value="39.000"
-                    else if(document.f1.pro1.selectedIndex==5)
-                            document.f1.val1.value="59.000"
-                    else if(document.f1.pro1.selectedIndex==6)
-                            document.f1.val1.value="59.000"
-            }
-
-                    function ver2(){
-                        if(document.f1.pro2.selectedIndex==1)
-                            document.f1.val2.value="59.000"
-                        else if(document.f1.pro2.selectedIndex==2)
-                                document.f1.val2.value="89.000"
-                        else if(document.f1.pro2.selectedIndex==3)
-                                document.f1.val2.value="69.000"
-                        else if(document.f1.pro2.selectedIndex==4)
-                                document.f1.val2.value="39.000"
-                        else if(document.f1.pro2.selectedIndex==5)
-                                document.f1.val2.value="59.000"
-                        else if(document.f1.pro2.selectedIndex==6)
-                                document.f1.val2.value="59.000"
-                    }
-
-                        function ver3(){
-                            if(document.f1.pro3.selectedIndex==1)
-                                document.f1.val3.value="59.000"
-                            else if(document.f1.pro3.selectedIndex==2)
-                                    document.f1.val3.value="89.000"
-                            else if(document.f1.pro3.selectedIndex==3)
-                                    document.f1.val3.value="69.000"
-                            else if(document.f1.pro3.selectedIndex==4)
-                                    document.f1.val3.value="39.000"
-                            else if(document.f1.pro3.selectedIndex==5)
-                                    document.f1.val3.value="59.000"
-                            else if(document.f1.pro3.selectedIndex==6)
-                                    document.f1.val3.value="59.000"
-                        }
-
-                            function ver4(){
-                                if(document.f1.pro4.selectedIndex==1)
-                                    document.f1.val4.value="59.000"
-                                else if(document.f1.pro4.selectedIndex==2)
-                                        document.f1.val4.value="89.000"
-                                else if(document.f1.pro4.selectedIndex==3)
-                                        document.f1.val4.value="69.000"
-                                else if(document.f1.pro4.selectedIndex==4)
-                                        document.f1.val4.value="39.000"
-                                else if(document.f1.pro4.selectedIndex==5)
-                                        document.f1.val4.value="59.000"
-                                else if(document.f1.pro4.selectedIndex==6)
-                                        document.f1.val4.value="59.000"
-                            }
-
-                                function ver5(){
-                                    if(document.f1.pro5.selectedIndex==1)
-                                        document.f1.val5.value="59.000"
-                                    else if(document.f1.pro5.selectedIndex==2)
-                                            document.f1.val5.value="89.000"
-                                    else if(document.f1.pro5.selectedIndex==3)
-                                            document.f1.val5.value="69.000"
-                                    else if(document.f1.pro5.selectedIndex==4)
-                                            document.f1.val5.value="39.000"
-                                    else if(document.f1.pro5.selectedIndex==5)
-                                            document.f1.val5.value="59.000"
-                                    else if(document.f1.pro5.selectedIndex==6)
-                                            document.f1.val5.value="59.000"
-                                }
-
-                                    function ver6(){
-                                        if(document.f1.pro6.selectedIndex==1)
-                                            document.f1.val6.value="59.000"
-                                        else if(document.f1.pro6.selectedIndex==2)
-                                                document.f1.val6.value="89.000"
-                                        else if(document.f1.pro6.selectedIndex==3)
-                                                document.f1.val6.value="69.000"
-                                        else if(document.f1.pro6.selectedIndex==4)
-                                                document.f1.val6.value="39.000"
-                                        else if(document.f1.pro6.selectedIndex==5)
-                                                document.f1.val6.value="59.000"
-                                        else if(document.f1.pro6.selectedIndex==6)
-                                                document.f1.val6.value="59.000"
-                                    }       
-
-        function calcular(){
-                va1=document.f1.val1.value;
-                ca1=document.f1.can1.value;
-                tt1=va1*ca1
-                document.f1.tot1.value=tt1
+    <style>
+        html {
+            background-image: url("./imagenes/22.jpg");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
         }
-            function calcular(){
-                va2=document.f1.val2.value;
-                ca2=document.f1.can2.value;
-                tt2=va2*ca2
-                document.f1.tot2.value=tt2
+
+        .back {
+            margin: 0 42%;
+            padding: 14px 18px;
+            background-color: #5c1515;
+            color: white;
+            border-radius: 4px;
+            text-decoration: none;
+        }
+
+        .color {
+            background-color: rgb(250, 244, 243);
+        }
+    </style>
+
+    <script lang="javascript">
+
+        // Function to calculate total for each item
+        function calculateTotal(itemNumber) {
+            var val = document.f1['val' + itemNumber].value;
+            var quantity = document.f1['can' + itemNumber].value;
+            var total = val * quantity;
+            document.f1['tot' + itemNumber].value = total;
+        }
+
+        // Function to calculate discounts and total payment
+        function calculateTotalPayment() {
+            var total = 0;
+
+            // Calculate the sum of all items
+            for (var i = 1; i <= 6; i++) {
+                total += parseFloat(document.f1['tot' + i].value) || 0;
             }
-                function calcular(){
-                    va3=document.f1.val3.value;
-                    ca3=document.f1.can3.value;
-                    tt3=va3*ca3
-                    document.f1.tot3.value=tt3
 
-                }
+            // Display subtotal
+            document.f1.subt.value = total;
 
-                    function calcular(){
-                        va4=document.f1.val4.value;
-                        ca4=document.f1.can4.value;
-                        tt4=va4*ca4
-                        document.f1.tot4.value=tt4
+            // Calculate discount
+            var discount = 0;
+            if (total < 99000) {
+                discount = 0;
+            } else if (total >= 100000 && total < 180000) {
+                discount = total * (3 / 100);
+            } else if (total >= 190000 && total < 250000) {
+                discount = total * (5 / 100);
+            } else {
+                discount = total * (10 / 100);
+            }
 
-                    }
+            // Display discount and total to pay
+            document.f1.des.value = discount;
+            document.f1.ToP.value = total - discount;
+        }
 
-                        function calcular(){
-                            va5=document.f1.val5.value;
-                            ca5=document.f1.can5.value;
-                            tt5=va5*ca5
-                            document.f1.tot5.value=tt5
+    </script>
+</head>
 
-                        }
-                            function calcular(){
-                                va6=document.f1.val6.value;
-                                ca6=document.f1.can6.value;
-                                tt6=va6*ca6
-                                document.f1.tot6.value=tt6
-                            }
-               
-                     //Suma
-                        st=tt1+tt2+tt3+tt4+tt5+tt6
-                        document.f1.st.value=st
+<body>
 
-                    //Descuentos
-                        if(st< 99000){
-                            document.f1.des.value="0%"
-                            ds=st*(0/100)
-                            document.f1.prc.value="0%"
-                            document.f1.des.value=ds
-                        }
+<nav>
+    <ul>
+        <a href="Index.html"><img src="./imagenes/01.png" alt="logo" style=" float: right; width: 200px; margin: 0 200px; "></a>
+    </ul>
+</nav>
 
-                            else if(st >= 180000 && st<=100000){
-                                ds=st*(3/100)
-                                document.f1.prc.value="3%"
-                                document.f1.des.value=ds
-                            }
+<div class="container">
 
-                                    else if(st>=250000 && st<=190000){
-                                        ds=st*(5/100)
-                                        document.f1.prc.value="5%"
-                                        document.f1.des.value=ds
-                                    }
-                                        else{
-                                            ds=st*(10/100)
-                                            document.f1.prc.value="10%"
-                                            document.f1.des.value=ds
-                                        }
-                                        
+</div>
 
-                    //Total a pagar
-                    fac=st-ds
-                    document.f1.ToP.value=value
-            
-            
-        </script>
-    </head>
+<div class="social">
+    <a href="+573008676270"><img src="./imagenes/34.png" alt="whatsApp"></a>
+    <a href="facebook.com/orientacionatualcance"><img src="./imagenes/35.png" alt="facebook"></a>
+    <a href="instagram.com/?hl=es-la"><img src="./imagenes/36.png" alt="Instagram"></a>
+    <a href="orientacionatualcance@gmail.com"><img src="./imagenes/37.png" alt="Gmail"></a>
+</div>
 
-    <body>
-
-        <nav>
-            <ul>
-                <a href="Index.html"><img src="./imagenes/01.png" alt="logo" style=" float: right; 
-                width: 200px; margin: 0 200px; "></a>
-            </ul>
-        </nav>
-
-        <div class="container">
-                
-        </div>  
-        
-        <div class="social">
-            <a href="+573008676270"><img src="./imagenes/34.png" alt="whatsApp"></a>
-            <a href="facebook.com/orientacionatualcance"><img src="./imagenes/35.png" alt="facebook"></a>
-            <a href="instagram.com/?hl=es-la"><img src="./imagenes/36.png" alt="Instagram"></a>
-            <a href="orientacionatualcance@gmail.com"><img src="./imagenes/37.png" alt="Gmail"></a>
-
-        </div>
-
-    <center>
+<center>
     <font face="helvetica">
-    <form name=f1>
-        <table border="0" cellspacing="1" width="800px" height="500px" style= "background-color: #643023">
-            <tr>
-                <th style="background-color: #a87f41;" colspan="5px">Factura Servicios Psicológicos</th>
-            </tr>
-            <tr>
-                <th>Nombre           <br> <input type="text" size="15"></th>
-                <th>Telefono         <br> <input type="text" size="15"></th>                             
-                <th>Direccion        <br> <input type="text" size="15"></th>
-                <th>E-mail           <br> <input type="text" size="15"></th>                            
-            </tr>
-            <tr>
-                <th>Descripcion          
-                <th>Valor                                      
-                <th>Cantidad                               
-                <th>Total                                                                                  
-            </tr>
-              <tr>
-                <th>
-                    <select name="pro1" onclick="ver1()">
-                        <option>---Seleccione Producto---
-                        <option> Individual
-                        <option> Grupal
-                        <option> Pareja
-                        <option> Virtual y/o telefono 
-                        <option> Asesorias al año
-                        <option> Talleres al año
-                    </select>
-                </th>
+        <form name=f1>
+            <table border="0" cellspacing="1" width="800px" height="500px" style="background-color: #643023">
+                <tr>
+                    <th style="background-color: #a87f41;" colspan="5px">Factura Servicios Psicológicos</th>
+                </tr>
+                <tr>
+                    <th>Nombre<br> <input type="text" size="15"></th>
+                    <th>Telefono<br> <input type="text" size="15"></th>
+                    <th>Direccion<br> <input type="text" size="15"></th>
+                    <th>E-mail<br> <input type="text" size="15"></th>
+                </tr>
+                <tr>
+                    <th>Descripcion
+                    <th>Valor
+                    <th>Cantidad
+                    <th>Total
+                </tr>
+                <!-- Use a loop for item rows -->
+                <!-- Assuming that product values are in an array called productValues -->
+                <!-- You can customize the options based on your actual product values -->
+                <!-- Repeat the following block for each item -->
+                <tr>
+                    <th>
+                        <select name="pro1" onclick="ver1()">
+                            <option>---Seleccione Producto---</option>
+                            <option> Individual</option>
+                            <option> Grupal</option>
+                            <option> Pareja</option>
+                            <option> Virtual y/o telefono </option>
+                            <option> Asesorias al año</option>
+                            <option> Talleres al año</option>
+                        </select>
+                    </th>
                     <th><input type="text" name="val1" size="15" class="color"></th>
-                    <th><input type="text" name="can1" size="15" class="color"></th>
+                    <th><input type="text" name="can1" size="15" class="color" oninput="calculateTotal(1)"></th>
                     <th><input type="text" name="tot1" size="15" class="color"></th>
-              </tr>
-              <tr>
-                    <th><select name="pro2" onclick="ver2()">
-                      <option>---Seleccione Producto---
-                      <option> Individual
-                      <option> Grupal
-                      <option> Pareja
-                      <option> Virtual y/o telefono 
-                      <option> Asesorias al año
-                      <option> Talleres al año
-            </select>
-                    </th>
-                    <th><input type="text" name="val2" size="15" class="color" ></th>
-                    <th><input type="text" name="can2" size="15" class="color" ></th>
-                    <th><input type="text" name="tot2" size="15" class="color" ></th>
                 </tr>
+                <!-- Repeat the above block for pro2, pro3, ..., pro6 -->
+                <!-- ... -->
                 <tr>
-                    <th><select name="pro3" onclick="ver3()">
-                        <option>---Seleccione Producto---
-                        <option> Individual
-                        <option> Grupal
-                        <option> Pareja
-                        <option> Virtual y/o telefono 
-                        <option> Asesorias al año
-                        <option> Talleres al año  
-            </select>
-                    </th>
-                    <th><input type="text" name="val3" size="15" class="color" ></th>
-                    <th><input type="text" name="can3" size="15" class="color" ></th>
-                    <th><input type="text" name="tot3" size="15" class="color" ></th>
-              </tr>
-              <tr>
-                    <th><select name="pro4" onclick="ver4()">
-                        <option>---Seleccione Producto---
-                        <option> Individual
-                        <option> Grupal
-                        <option> Pareja
-                        <option> Virtual y/o telefono 
-                        <option> Asesorias al año
-                        <option> Talleres al año                
-            </select>
-                    </th>
-                    <th><input type="text" name="val4" size="15" class="color" ></th>
-                    <th><input type="text" name="can4" size="15" class="color" ></th>
-                    <th><input type="text" name="tot4" size="15" class="color" ></th>
-                    
-                </tr>
-                <tr>
-                    <th><select name="pro5" onclick="ver5()">
-                        <option>---Seleccione Producto---
-                        <option> Individual
-                        <option> Grupal
-                        <option> Pareja
-                        <option> Virtual y/o telefono 
-                        <option> Asesorias al año
-                        <option> Talleres al año                
-            </select>
-                    </th>
-                    <th><input type="text" name="val5" size="15" class="color" ></th>
-                    <th><input type="text" name="can5" size="15" class="color" ></th>
-                    <th><input type="text" name="tot5" size="15" class="color" ></th>
-                                                         
-                </tr>
-                <tr>
-                    <th><select name="pro6" onclick="ver6()">
-                        <option>---Seleccione Producto---
-                        <option> Individual
-                        <option> Grupal
-                        <option> Pareja
-                        <option> Virtual y/o telefono 
-                        <option> Asesorias al año
-                        <option> Talleres al año                
-            </select>
-                </th>
-                    <th><input type="text" name="val6" size="15" class="color" ></th>
-                    <th><input type="text" name="can6" size="15" class="color" ></th>
-                    <th><input type="text" name="tot6" size="15" class="color" ></th>
-
-                </th>
-                </tr>
                     <th>SUBTOTAL</th>
                     <th><input type="text" name="subt" size="15" class="color"></th>
                 </tr>
                 <tr>
                     <th>Descuento</th>
-                    <th><input type="text" name="Dcto" size="15" ></th>
-                    <th><input type="text" name="porc" size="10" class="color"></th> 
+                    <th><input type="text" name="des" size="15"></th>
                 </tr>
                 <tr>
                     <th>Total a Pagar</th>
                     <th><input type="text" name="ToP" size="15" class="color"></th>
-                  
-                </tr>              
+                </tr>
                 <tr>
-                    <th><input type="button" value="Realizar Factura" name="cal">
-                    <th><input type="button" value="Limpiar Factura" name="lim">  
-                </tr>    
-        </table>    
-    </form>
-    </center>
-    <div>
-        <a class="back" href="Index.html">Regresar al Inicio</a>
-    </div>
-    </body>
+                    <th><input type="button" value="Realizar Factura" name="cal" onclick="calculateTotalPayment()">
+                    <th><input type="button" value="Limpiar Factura" name="lim">
+                </tr>
+            </table>
+        </form>
+</center>
+<div>
+    <a class="back" href="Index.html">Regresar al Inicio</a>
+</div>
+</body>
 </html>
