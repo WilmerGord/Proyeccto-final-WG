@@ -1,0 +1,171 @@
+<html lang="es ">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="estilo/estilo.css">
+    <link rel="stylesheet" href="estilo/estilo2.css">
+    <link rel="icon" href="./imagenes/012.ico">
+   
+    <style>
+        table{
+            width: 80%;
+            margin: 10px auto;
+            font-size: 17px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            background-color: rgba(59, 60, 61, 0.904);
+        }
+        
+        table, th, td {
+            border: 1px solid rgba(26, 25, 25, 0.904);
+            border-collapse: collapse;
+            text-align: center;
+            padding: 10px 25px ;
+        }
+
+        input, select{
+            padding: 12px 20px;
+            margin: 8px 0;
+            box-sizing: border-box;
+            border-radius: 5px;
+        }
+
+    </style>
+    <title>Document</title>
+</head>
+<body class="form">
+    <nav>    
+        <ul>
+            <li><a href="Index.html">Inicio</a></li>
+            <li><a href="QuienesSomos.html">Quiénes somos</a></li>
+            <li><a href="Servicios.html">Servicios</a></li>
+            <li><a href="Blog.html">Blog</a></li>
+            <li><a href="FormasDePago.html">Pagos</a></li>
+            <li><a href="Contacto.html">Contacto</a></li>
+            <li><a  class="active" href="formRegistro.html">Registro</a></li>
+            <a href="Index.html"><img src="./imagenes/01.png" alt="logo" class="logo"></a>
+        </ul>
+    </nav>
+
+    <title>Registro</title>
+
+    <div class="container">
+                
+    </div>  
+    
+    <div class="social">
+        <a href="+573008676270"><img src="./imagenes/34.png" alt="whatsApp"></a>
+        <a href="facebook.com/orientacionatualcance"><img src="./imagenes/35.png" alt="facebook"></a>
+        <a href="instagram.com/?hl=es-la"><img src="./imagenes/36.png" alt="Instagram"></a>
+        <a href="orientacionatualcance@gmail.com"><img src="./imagenes/37.png" alt="Gmail"></a>
+
+    </div>
+        
+    <table>   
+        <tr>
+            <th colspan="4" style="background-color: rgba(107, 189, 192, 0.904); color: white;"><h1> Registro </h1></th>
+        </tr>
+        <form>
+            <tr>
+                <td>
+                    <label for="fname">Nombre</label><br>
+                    <input type="text" name="fname" value="Nombre">
+                </td>            
+                <td>
+                    <label for="lname">Apellido</label>
+                    <input type="text" name="lname" value="Apellido">
+                </td>
+                <td>Estado civil</td>
+                <td>
+                    <input type="radio" value="Soltero">
+                    <label for="Soltero">Soltero</label><br>
+                    <input type="radio" value="Casado">
+                    <label for="Casado">Casado</label><br>
+                    <input type="radio" value="UnionLibre">
+                    <label for="UnionLibre">Unión libre</label><br>
+                    <input type="radio" value="Viudo">
+                    <label for="Viudo">Viudo</label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="FechaDeRegistro">Fecha de Registro</label>
+                    <input type="date" name="FechaDeRegistro">
+                </td>
+                <td colspan="2">
+                    <label>Género</label><br>
+                    <input type="radio" name="género" value="masculino">
+                    <label for="masculino">Masculino</label><br>
+                    <input type="radio" name="género" value="femenino">
+                    <label for="femenino">Femenino</label><br>
+                    <input type="radio" name="género" value="otro">
+                    <label for="otro">Otro</label>
+                </td>
+                <td>
+                    <label for="ciudad">Ciudad</label><br>
+                    <select name="ciudad">
+                        <option value="Antioquia">Antioquia</option>
+                        <option value="Atlántico">Atlántico</option>
+                        <option value="Bogota">Bogota</option>
+                        <option value="Bolivar">Bolivar</option>
+                        <option value="Boyaca">Boyaca</option>
+                        <option value="Caldas">Caldas</option>
+                        <option value="Cali">Cali</option>
+                        <option value="Caquetá">Caquetá</option>
+                        <option value="Cauca">Cauca</option>
+                        <option value="Cundinamarca">Cundinamarca</option>
+                        <option value="Huila">Huila</option>
+                        <option value="Magdalena">Magdalena</option>
+                        <option value="Meta">Meta</option>
+                        <option value="Nariño">Nariño</option>
+                        <option value="Norte de Santander">Norte de Santander</option>
+                        <option value="Quindío">Quindío</option>
+                        <option value="Risaralda">Risaralda</option>
+                        <option value="San Andres y Providencia">San Andres y Providencia</option>
+                        <option value="Santander">Santander</option>
+                        <option value="Sucre">Sucre</option>
+                        <option value="Tolima">Tolima</option>
+                        <option value="Valle del Cauca">Valle del Cauca</option>
+                        
+                        
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="Celular">Numero de Celular</label>
+                    <input type="tel" name="Celular" placeholder="300-000-00-00" pattern="[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}" required>
+                    
+                </td>
+                <td colspan="2">
+                    <label for="Dirección">Dirección</label><br>
+                    <input type="text" name="Direction" value="Ingrese la dirección">
+                </td>
+                <td>
+                    <label for="email">Correo Electronico</label>
+                    <input type="email" name="email" value="Ingrese su correo electrónico">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4">
+                    <label>Requiere algún tipo de servicio</label><br>
+                    <input type="radio" name="Domicile" value="Domicilio">
+                    <label for="Si">Si</label><br>
+                    <input type="radio" name="phone" value="Telefonico">
+                    <label for="No">No</label><br>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4">
+                    <label>¿Cuál?</label><br>
+                    <textarea name="perfil" rows="5" cols="120">Comentario...</textarea>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4">
+                    <input type="submit" value="Enviar">
+                    <input type="reset" value="Borrar">
+                </td>
+            </tr>
+        </form>    
+    </table>    
+</body>
+</html>
