@@ -25,6 +25,10 @@
         .color {
             background-color: rgb(250, 244, 243);
         }
+
+        .fact{
+            border-radius: 4px;
+        }
     </style>
 
     <script lang="javascript">
@@ -34,7 +38,8 @@
             var val = document.f1['val' + itemNumber].value;
             var quantity = document.f1['can' + itemNumber].value;
             var total = val * quantity;
-            document.f1['tot' + itemNumber].value = total;
+            document.f1['tot' + itemNumber].value = `$ ${total.toFixed(2)}`;
+            calculateTotalPayment(); // Recalculate total payment when any item changes
         }
 
         // Function to calculate discounts and total payment
@@ -43,11 +48,11 @@
 
             // Calculate the sum of all items
             for (var i = 1; i <= 6; i++) {
-                total += parseFloat(document.f1['tot' + i].value) || 0;
+                total += parseFloat(document.f1['val' + i].value) * parseFloat(document.f1['can' + i].value) || 0;
             }
 
             // Display subtotal
-            document.f1.subt.value = total;
+            document.f1.subt.value = `$ ${total.toFixed(2)}`;
 
             // Calculate discount
             var discount = 0;
@@ -62,8 +67,8 @@
             }
 
             // Display discount and total to pay
-            document.f1.des.value = discount;
-            document.f1.ToP.value = total - discount;
+            document.f1.des.value = `$ ${discount.toFixed(2)}`;
+            document.f1.ToP.value = `$ ${(total - discount).toFixed(2)}`;
         }
 
     </script>
@@ -77,10 +82,6 @@
     </ul>
 </nav>
 
-<div class="container">
-
-</div>
-
 <div class="social">
     <a href="+573008676270"><img src="./imagenes/34.png" alt="whatsApp"></a>
     <a href="facebook.com/orientacionatualcance"><img src="./imagenes/35.png" alt="facebook"></a>
@@ -88,33 +89,23 @@
     <a href="orientacionatualcance@gmail.com"><img src="./imagenes/37.png" alt="Gmail"></a>
 </div>
 
-<center>
+<center class="fact">
     <font face="helvetica">
         <form name=f1>
-            <table border="0" cellspacing="1" width="800px" height="500px" style="background-color: #643023">
+            <table border="0" cellspacing="1" width="800px" height="500px" style="background-color: #e9e1e0">
                 <tr>
-                    <th style="background-color: #a87f41;" colspan="5px">Factura Servicios Psicológicos</th>
+                    <th style="background-color: #f3f1e7;" colspan="5px">Factura Servicios Psicológicos</th>
                 </tr>
                 <tr>
-                    <th>Nombre<br> <input type="text" size="15"></th>
-                    <th>Telefono<br> <input type="text" size="15"></th>
-                    <th>Direccion<br> <input type="text" size="15"></th>
-                    <th>E-mail<br> <input type="text" size="15"></th>
+                    <th>Nombre<br> <input type="text" size="15" placeholder="Nombre completo"></th>
+                    <th>Telefono<br> <input type="text" size="15" placeholder="Telefono de contacto"></th>
+                    <th>Direccion<br> <input type="text" size="15" placeholder="Dirección de residencia"></th>
+                    <th>E-mail<br> <input type="text" size="15" placeholder="Correo electrónico"></th>
                 </tr>
                 <tr>
-                    <th>Descripcion
-                    <th>Valor
-                    <th>Cantidad
-                    <th>Total
-                </tr>
-                <!-- Use a loop for item rows -->
-                <!-- Assuming that product values are in an array called productValues -->
-                <!-- You can customize the options based on your actual product values -->
-                <!-- Repeat the following block for each item -->
-                <tr>
-                    <th>
+                    <th>Descripcion <br>
                         <select name="pro1" onclick="ver1()">
-                            <option>---Seleccione Producto---</option>
+                            <option>Seleccione el servicio</option>
                             <option> Individual</option>
                             <option> Grupal</option>
                             <option> Pareja</option>
@@ -123,23 +114,24 @@
                             <option> Talleres al año</option>
                         </select>
                     </th>
-                    <th><input type="text" name="val1" size="15" class="color"></th>
-                    <th><input type="text" name="can1" size="15" class="color" oninput="calculateTotal(1)"></th>
-                    <th><input type="text" name="tot1" size="15" class="color"></th>
+                    <th>Valor por sesión <br>
+                        <input type="text" name="can1" size="15" class="color" oninput="calculateTotal(1)"></th>
+                    <th>Cantidad de Sesiones <br>
+                        <input type="text" name="val1" size="15" class="color" placeholder="Sesiones"></th>
+                    <th>Total <br>
+                        <input type="text" name="tot1" size="15" class="color" readonly></th>
                 </tr>
-                <!-- Repeat the above block for pro2, pro3, ..., pro6 -->
-                <!-- ... -->
                 <tr>
                     <th>SUBTOTAL</th>
-                    <th><input type="text" name="subt" size="15" class="color"></th>
+                    <th><input type="text" name="subt" size="15" class="color" readonly></th>
                 </tr>
                 <tr>
                     <th>Descuento</th>
-                    <th><input type="text" name="des" size="15"></th>
+                    <th><input type="text" name="des" size="15" readonly></th>
                 </tr>
                 <tr>
                     <th>Total a Pagar</th>
-                    <th><input type="text" name="ToP" size="15" class="color"></th>
+                    <th><input type="text" name="ToP" size="15" class="color" readonly></th>
                 </tr>
                 <tr>
                     <th><input type="button" value="Realizar Factura" name="cal" onclick="calculateTotalPayment()">
